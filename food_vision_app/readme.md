@@ -1,7 +1,7 @@
 # Food Vision App
 ```
-This app will take an image and predict which food class it belongs to out of the
- 
+YOOOO.
+This app will take an image and predict which food class it belongs to out of the 
 101 the model was trained on.
 The 101 foods are listed below.
 ```
