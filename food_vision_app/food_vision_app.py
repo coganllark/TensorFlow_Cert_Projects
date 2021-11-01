@@ -5,8 +5,10 @@
 # input = (224, 224, 3)
 
 import streamlit as st
+import pandas as pd
 import numpy as np
 import cv2 as cv
+import os, urllib, cv2
 
 
 def main():
@@ -20,15 +22,29 @@ def main():
                 ["Show Instructions", "Input an Image", "Run the Model"])
     
     if app_mode == "Show Instructions":
-        st.siderbar.success('Instructions')
+        st.sidebar.success('Instructions')
     elif app_mode == "Input an Image":
         readme_text.empty()
-        # input_image()
+        input_image()
     elif app_mode == "Run the Model":
         readme_text.empty()
         # run_the_model()
 
 
+
+
+
+
+
+
+def input_image():
+    image_url = st.text_input('Food Image URL (Example Below)', 'https://i.imgur.com/jXSQD2r.jpg')
+
+    st.image(image_url)
+
+    # st.image("https://i.imgur.com/jXSQD2r.jpg")
+
+    #st.write('The current movie title is', image_url)
 
 # def download_file(file_path, url):
 #     # # Don't download the file twice. (If possible, verify the download using the file length.)
